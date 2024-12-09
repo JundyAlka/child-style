@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost/index.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddie Korner - Cute Child Style Shop</title>
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(to bottom, #ffe4e6, #e6e6fa);
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+        .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 130px; /* Adjust size as needed */
+    margin-right: 45px;
+}
+.logo-flash {
+    align-items: center;
+    display: flex;
+    max-width: 250px; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(180%);
+}
+
+.logo-title {
+    margin: 0;
+}
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        .nav-menu li {
+            margin-left: 20px;
+        }
+        .profile-img {
+            max-width: 30px;
+        }
+            
+        .nav-menu a {
+            text-decoration: none;
+            color: #9370db;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+        .nav-menu a:hover {
+            color: #ff69b4;
+        }
+        .section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #9370db;
+            text-align: center;
+        }
+        .flash-sale-timer {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #9370db;
+        }
+        .product-price {
+            color: #ff69b4;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .product-sold {
+            color: #32cd32;
+            font-weight: bold;
+        }
+        .product-spec {
+            margin-bottom: 5px;
+        }
+        .footer {
+            background-color: #9370db;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .profile-img {
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-left: 20px;
+            vertical-align: middle;
+            max-width: 35px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #ff1493;
+        
+        
+        }
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .product-rating {
+            color: #ffa500;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="./index_files/logo_webiste.png" alt="Kiddie Korner Logo" class="logo-image">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="http://localhost/index.php#">Home</a></li>
+                    <li><a href="http://localhost/index.php#">Products</a></li>
+                    <li><a href="http://localhost/index.php#">About</a></li>
+                    <li><a href="http://localhost/index.php#">Contact</a></li>
+                    <li><a href="http://localhost/keranjang.php">Keranjang</a></li>
+                                        <li><a href="http://localhost/index-auth.php">Login</a></li>
+                                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section container">
+        <img src="./index_files/Flash_Sale.png" class="logo-flash">
+            <div class="flash-sale-timer" id="flashSaleTimer">Time Left: 00:57:39</div>
+            <div class="product-grid">
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=8">
+                        <img src="./index_files/sepatu3.jpg" alt="Animal Friends Socks Pack" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <div class="product-name">Animal Friends Socks Pack</div>
+                        <div class="product-price">Rp. 80.000</div>
+                        <div class="product-sold">Terjual 55</div>
+                        <form method="POST" action="http://localhost/keranjang.php">
+                            <input type="hidden" name="id_produk" value="8">
+                            <input type="hidden" name="jumlah" value="1">
+                            <button type="submit" name="tambah_ke_keranjang" class="btn">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=4">
+                                        </a>
+                    <div class="product-info">
+                        <div class="product-name">Butterfly Hair Clips Set</div>
+                        <div class="product-price">Rp. 50.000</div>
+                        <div class="product-sold">Terjual 50</div>
+                        <form method="POST" action="http://localhost/keranjang.php">
+                            <input type="hidden" name="id_produk" value="4">
+                            <input type="hidden" name="jumlah" value="1">
+                            <button type="submit" name="tambah_ke_keranjang" class="btn">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=7">
+                                        </a>
+                    <div class="product-info">
+                        <div class="product-name">Superhero Cape and Mask Set</div>
+                        <div class="product-price">Rp. 120.000</div>
+                        <div class="product-sold">Terjual 40</div>
+                        <form method="POST" action="http://localhost/keranjang.php">
+                            <input type="hidden" name="id_produk" value="7">
+                            <input type="hidden" name="jumlah" value="1">
+                            <button type="submit" name="tambah_ke_keranjang" class="btn">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">Product Catalog</h2>
+            <div class="product-grid">
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=1">
+                        <img src="./index_files/sepatu.jpg" alt="Cute Teddy Bear Shirt" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <div class="product-name">Cute Teddy Bear Shirt</div>
+                        <div class="product-price">Rp. 150.000</div>
+                        <div class="product-spec">Soft cotton t-shirt with teddy bear print</div>
+                        <div class="product-sold">Terjual 25</div>
+                        <a href="http://localhost/detail_produk.php?id=1" class="btn">View Details</a>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=2">
+                        <img src="./index_files/sepatu1.jpg" alt="Rainbow Unicorn Dress" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <div class="product-name">Rainbow Unicorn Dress</div>
+                        <div class="product-price">Rp. 250.000</div>
+                        <div class="product-spec">Colorful dress with unicorn pattern</div>
+                        <div class="product-sold">Terjual 15</div>
+                        <a href="http://localhost/detail_produk.php?id=2" class="btn">View Details</a>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=3">
+                        <img src="./index_files/sepatu2.jpg" alt="Dinosaur Pajama Set" class="product-image">
+                    </a>
+                    <div class="product-info">
+                        <div class="product-name">Dinosaur Pajama Set</div>
+                        <div class="product-price">Rp. 180.000</div>
+                        <div class="product-spec">Comfortable pajama set with dinosaur design</div>
+                        <div class="product-sold">Terjual 20</div>
+                        <a href="http://localhost/detail_produk.php?id=3" class="btn">View Details</a>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=4">
+                                        </a>
+                    <div class="product-info">
+                        <div class="product-name">Butterfly Hair Clips Set</div>
+                        <div class="product-price">Rp. 50.000</div>
+                        <div class="product-spec">Set of 5 colorful butterfly hair clips</div>
+                        <div class="product-sold">Terjual 50</div>
+                        <a href="http://localhost/detail_produk.php?id=4" class="btn">View Details</a>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=5">
+                                        </a>
+                    <div class="product-info">
+                        <div class="product-name">Space Rocket Backpack</div>
+                        <div class="product-price">Rp. 200.000</div>
+                        <div class="product-spec">Durable backpack with space rocket design</div>
+                        <div class="product-sold">Terjual 10</div>
+                        <a href="http://localhost/detail_produk.php?id=5" class="btn">View Details</a>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <a href="http://localhost/detail_produk.php?id=6">
+                                        </a>
+                    <div class="product-info">
+                        <div class="product-name">Mermaid Swimsuit</div>
+                        <div class="product-price">Rp. 175.000</div>
+                        <div class="product-spec">One-piece swimsuit with mermaid scale pattern</div>
+                        <div class="product-sold">Terjual 30</div>
+                        <a href="http://localhost/detail_produk.php?id=6" class="btn">View Details</a>
+                    </div>
+                </div>
+                            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            © 2024 Kiddie Korner. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple countdown timer for flash sale
+        let timeLeft = 3600;
+        const timerElement = document.getElementById('flashSaleTimer');
+
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `Time Left: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                timerElement.textContent = "Flash Sale Ended!";
+            }
+        }
+
+        updateTimer();
+    </script>
+
+    
+
+
+<deepl-input-controller><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller></body></html>
